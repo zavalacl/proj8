@@ -4,7 +4,7 @@ describe MethodsPracticeHelpers do
   include MethodsPracticeHelpersSpecHelpers
   include MethodsPracticeHelpers
 
-  describe '#image_tag' do
+  describe '#image_tag', :pending do
 
     before(:each) do
       @src = random_string
@@ -34,7 +34,7 @@ describe MethodsPracticeHelpers do
         expect(@src_attr).not_to eq(nil)
       end
 
-      describe 'the src attribute' do
+      describe 'src attribute' do
 
         it 'is equal to the passed in source' do
           expect(@src_attr.value).to eq(@src)
@@ -46,7 +46,7 @@ describe MethodsPracticeHelpers do
         expect(@alt_attr).not_to eq(nil)
       end
 
-      describe 'the alt attribute' do
+      describe 'alt attribute' do
 
         it 'is equal to the passed in alternate text' do
           expect(@alt_attr.value).to eq(@alt)
@@ -58,7 +58,7 @@ describe MethodsPracticeHelpers do
         expect(@class_attr).not_to eq(nil)
       end
 
-      describe 'the class attribute' do
+      describe 'class attribute' do
 
         it 'includes exactly 2 classes' do
           expect( @class_attr.value.split(/\s+/).size ).to eq(2)

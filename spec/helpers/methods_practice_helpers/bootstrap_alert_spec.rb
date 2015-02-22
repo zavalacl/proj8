@@ -4,7 +4,7 @@ describe MethodsPracticeHelpers do
   include MethodsPracticeHelpersSpecHelpers
   include MethodsPracticeHelpers
 
-  describe '#bootstrap_alert' do
+  describe '#bootstrap_alert', :pending do
 
     context 'when passed both a message and a type' do
 
@@ -23,7 +23,7 @@ describe MethodsPracticeHelpers do
         expect( @alert.name ).to eq('div')
       end
 
-      describe 'the div tag' do
+      describe 'div tag' do
 
         before(:each) do
           attributes = @alert.attributes
@@ -39,7 +39,7 @@ describe MethodsPracticeHelpers do
           expect(@class_attr).not_to eq(nil)
         end
 
-        describe 'the class attribute' do
+        describe 'class attribute' do
 
           it 'includes exactly 3 classes' do
             expect( @class_attr.value.split(/\s+/).size ).to eq(3)
@@ -63,7 +63,7 @@ describe MethodsPracticeHelpers do
           expect(@role_attr).not_to eq(nil)
         end
 
-        describe 'the role attribute' do
+        describe 'role attribute' do
 
           it 'is equal to "alert"' do
             expect(@role_attr.value).to eq('alert')
@@ -79,7 +79,7 @@ describe MethodsPracticeHelpers do
           expect( @button ).not_to eq(nil)
         end
 
-        describe 'the button' do
+        describe 'button' do
 
           before(:each) do
             attributes = @button.attributes
@@ -96,7 +96,7 @@ describe MethodsPracticeHelpers do
             expect(@type_attr).not_to eq(nil)
           end
 
-          describe 'the type attribute' do
+          describe 'type attribute' do
 
             it 'is equal to "button"' do
               expect(@type_attr.value).to eq('button')
@@ -108,7 +108,7 @@ describe MethodsPracticeHelpers do
             expect(@class_attr).not_to eq(nil)
           end
 
-          describe 'the class attribute' do
+          describe 'class attribute' do
 
             it 'is equal to "close"' do
               expect(@class_attr.value).to eq('close')
@@ -120,7 +120,7 @@ describe MethodsPracticeHelpers do
             expect(@data_dismiss_attr).not_to eq(nil)
           end
 
-          describe 'the data-dismiss attribute' do
+          describe 'data-dismiss attribute' do
 
             it 'is equal to "alert"' do
               expect(@data_dismiss_attr.value).to eq('alert')
@@ -132,7 +132,7 @@ describe MethodsPracticeHelpers do
             expect(@aria_label_attr).not_to eq(nil)
           end
 
-          describe 'the aria-label attribute' do
+          describe 'aria-label attribute' do
 
             it 'is equal to "Close"' do
               expect(@aria_label_attr.value).to eq('Close')
@@ -148,7 +148,7 @@ describe MethodsPracticeHelpers do
             expect(@span).not_to eq(nil)
           end
 
-          describe 'the span tag' do
+          describe 'span tag' do
 
             before(:each) do
               attributes = @span.attributes
@@ -162,7 +162,7 @@ describe MethodsPracticeHelpers do
               expect(@aria_hidden_attr).not_to eq(nil)
             end
 
-            describe 'the aria-hidden attribute' do
+            describe 'aria-hidden attribute' do
 
               it 'is equal to "true"' do
                 expect(@aria_hidden_attr.value).to eq('true')
@@ -214,14 +214,14 @@ describe MethodsPracticeHelpers do
         @alert    = @contents.first
       end
 
-      describe 'the div tag' do
+      describe 'div tag' do
 
         before(:each) do
           attributes = @alert.attributes
           @class_attr = attributes['class']
         end
 
-        describe 'the class attribute' do
+        describe 'class attribute' do
 
           it 'includes "alert-info"' do
             expect( @class_attr.value.include?('alert-info') ).to eq(true)
