@@ -1,20 +1,16 @@
 module MethodsPracticeHelpers
 
   def image_tag(source, alternate_text)
-    # Generate an image tag with the given source (src) and the classes
+    # Generate an image tag with the given source and the classes
     # "img-responsive" and "img-thumbnail". The image should also have an alt
     # attribute with the contents of alternate_text.
   end
 
   def bootstrap_alert(message, type='info')
     # Generates the HTML for a Bootstrap alert (useful since it can be diffcult
-    # to remember all CSS needed to do it right). The generated HTML will look
-    # something like this:
-    #
-    # <div class="alert alert-<TYPE-GOES-HERE> alert-dismissible" role="alert">
-    #   <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    #   <MESSAGE-GOES-HERE>
-    # </div>
+    # to remember all HTML needed to do it right). It should show the message in
+    # the "message" variable and should have a class appropriate for the "type"
+    # that is passed in, defaulting to 'info' if no type is passed in.
   end
 
   def current_date_and_time
@@ -32,7 +28,7 @@ module MethodsPracticeHelpers
     # You may have heard of Cat Ipsum or Hipster Ipsum. Make up a new one.
     # Replace "something" with the kind of ipsum you want to create, then
     # generate text for the number of ipsums you want (here, we're defining
-    # an ipsum as just a phrase or sentence).
+    # an ipsum as a phrase or sentence).
   end
 
   def images_of_cats(number_of_cats)
